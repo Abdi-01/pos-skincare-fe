@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { logoutAction } from "../reducers/data";
-import { Link, } from 'react-router-dom';
 
 export default function App() {
 
@@ -15,7 +14,7 @@ export default function App() {
     console.log("Data username :", username);
     const role = useSelector((state) => state.authReducer.role);
     console.log("Data role :", role);
-    // const location = useLocation();
+    const location = useLocation();
 
     const logoutBtn = () => {
         localStorage.removeItem('skincare_login');
@@ -80,33 +79,43 @@ export default function App() {
                                 loading="lazy"
                             />
                         </a>
+
                         {
-                            !username ?
-                                <ul
-                                    class="dropdown-menu dropdown-menu-end"
-                                    aria-labelledby="navbarDropdownMenuAvatar"
-                                >
+                            username ?
+                                // (role == 1 ?
+                                    <ul
+                                        class="dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="navbarDropdownMenuAvatar"
+                                    >
 
-                                    <li>
-                                        <a class="dropdown-item" href="/login">Login</a>
-                                    </li>
-                                </ul>
-                                :
-                                <ul
-                                    class="dropdown-menu dropdown-menu-end"
-                                    aria-labelledby="navbarDropdownMenuAvatar"
-                                >
-                                    <li>
-                                        <a class="dropdown-item" href="#">Logout</a>
-                                    </li>
-                                </ul>
+                                        {/* <li>
+                                        <a class="dropdown-item" href="#">My profile</a>
+                                    </li> */}
+                                        {/* <li>
+                  <a class="dropdown-item" href="#">Settings</a>
+              </li> */}
+                                        <li>
+                                            <a class="dropdown-item" href="#">Logout</a>
+                                        </li>
+                                    </ul>
+                                    :
+                                    <ul
+                                        class="dropdown-menu dropdown-menu-end"
+                                        aria-labelledby="navbarDropdownMenuAvatar"
+                                    >
+
+                                        <li>
+                                            <a class="dropdown-item" href="/login">Login</a>
+                                        </li>
+                                    </ul>
+                                // )
+                               
                         }
-
                     </div>
                 </div>
 
             </div>
 
-        </nav >
+        </nav>
     );
 }
