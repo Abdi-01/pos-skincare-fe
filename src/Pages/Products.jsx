@@ -8,7 +8,10 @@ import {
     MDBCardText,
     MDBRow,
     MDBCol,
-    MDBBtn
+    MDBBtn,
+    MDBPaginationItem,
+    MDBPaginationLink,
+    MDBPagination
 } from 'mdb-react-ui-kit';
 
 export default function App() {
@@ -21,9 +24,6 @@ export default function App() {
                             <MDBCard>
                                 <MDBCardBody>
                                     <MDBCardTitle>Create Category</MDBCardTitle>
-                                    <MDBCardText>
-                                        With supporting text below as a natural lead-in to additional content.
-                                    </MDBCardText>
                                     <MDBBtn href='/category'>Create</MDBBtn>
                                 </MDBCardBody>
                             </MDBCard>
@@ -32,9 +32,7 @@ export default function App() {
                             <MDBCard>
                                 <MDBCardBody>
                                     <MDBCardTitle>Create Product</MDBCardTitle>
-                                    <MDBCardText>
-                                        With supporting text below as a natural lead-in to additional content.
-                                    </MDBCardText>
+                                    
                                     <MDBBtn href='/new-product'>Create</MDBBtn>
                                 </MDBCardBody>
                             </MDBCard>
@@ -48,15 +46,17 @@ export default function App() {
                     <MDBCol>
                         <MDBCard>
                             <MDBCardImage
-                                src='https://mdbootstrap.com/img/new/standard/city/041.webp'
+                                src='https://images.unsplash.com/photo-1566958769312-82cef41d19ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1156&q=80'
                                 alt='...'
                                 position='top'
                             />
                             <MDBCardBody>
-                                <MDBCardTitle>Card title</MDBCardTitle>
+                                <MDBCardTitle>Cetaphil</MDBCardTitle>
                                 <MDBCardText>
-                                    This is a longer card with supporting text below as a natural lead-in to additional content.
-                                    This content is a little bit longer.
+                                    Face Wash Cica Series 
+                                </MDBCardText>
+                                <MDBCardText>
+                                    Rp.65.000
                                 </MDBCardText>
                                 <MDBBtn className='me-1' id='primary'>
                                     Add Cart
@@ -70,15 +70,17 @@ export default function App() {
                     <MDBCol>
                         <MDBCard>
                             <MDBCardImage
-                                src='https://mdbootstrap.com/img/new/standard/city/042.webp'
+                                src='https://images.unsplash.com/photo-1566958769312-82cef41d19ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1156&q=80'
                                 alt='...'
                                 position='top'
                             />
                             <MDBCardBody>
-                                <MDBCardTitle>Card title</MDBCardTitle>
+                                <MDBCardTitle>Cetaphil</MDBCardTitle>
                                 <MDBCardText>
-                                    This is a longer card with supporting text below as a natural lead-in to additional content.
-                                    This content is a little bit longer.
+                                    Face Wash Cica Series 
+                                </MDBCardText>
+                                <MDBCardText>
+                                    Rp.65.000
                                 </MDBCardText>
                                 <MDBBtn className='me-1' color='danger'>
                                     Add Cart
@@ -92,15 +94,17 @@ export default function App() {
                     <MDBCol>
                         <MDBCard>
                             <MDBCardImage
-                                src='https://mdbootstrap.com/img/new/standard/city/043.webp'
+                                src='https://images.unsplash.com/photo-1566958769312-82cef41d19ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1156&q=80'
                                 alt='...'
                                 position='top'
                             />
                             <MDBCardBody>
-                                <MDBCardTitle>Card title</MDBCardTitle>
+                                <MDBCardTitle>Cetaphil</MDBCardTitle>
                                 <MDBCardText>
-                                    This is a longer card with supporting text below as a natural lead-in to additional content.
-                                    This content is a little bit longer.
+                                    Face Wash Cica Series 
+                                </MDBCardText>
+                                <MDBCardText>
+                                    Rp.65.000
                                 </MDBCardText>
                                 <MDBBtn className='me-1' color='danger'>
                                     Add Cart
@@ -114,15 +118,17 @@ export default function App() {
                     <MDBCol>
                         <MDBCard>
                             <MDBCardImage
-                                src='https://mdbootstrap.com/img/new/standard/city/044.webp'
+                                src='https://images.unsplash.com/photo-1566958769312-82cef41d19ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1156&q=80'
                                 alt='...'
                                 position='top'
                             />
                             <MDBCardBody>
-                                <MDBCardTitle>Card title</MDBCardTitle>
+                                <MDBCardTitle>Cetaphil</MDBCardTitle>
                                 <MDBCardText>
-                                    This is a longer card with supporting text below as a natural lead-in to additional content.
-                                    This content is a little bit longer.
+                                    Face Wash Cica Series 
+                                </MDBCardText>
+                                <MDBCardText>
+                                    Rp.65.000
                                 </MDBCardText>
                                 <MDBBtn className='me-1' color='danger'>
                                     Add Cart
@@ -133,7 +139,127 @@ export default function App() {
                             </MDBCardBody>
                         </MDBCard>
                     </MDBCol>
+                    <MDBCol>
+                        <MDBCard>
+                            <MDBCardImage
+                                src='https://images.unsplash.com/photo-1566958769312-82cef41d19ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1156&q=80'
+                                alt='...'
+                                position='top'
+                            />
+                            <MDBCardBody>
+                                <MDBCardTitle>Cetaphil</MDBCardTitle>
+                                <MDBCardText>
+                                    Face Wash Cica Series 
+                                </MDBCardText>
+                                <MDBCardText>
+                                    Rp.65.000
+                                </MDBCardText>
+                                <MDBBtn className='me-1' color='danger'>
+                                    Add Cart
+                                </MDBBtn>
+                                <MDBBtn className='me-1' color='danger'>
+                                    Order
+                                </MDBBtn>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </MDBCol>
+                    <MDBCol>
+                        <MDBCard>
+                            <MDBCardImage
+                                src='https://images.unsplash.com/photo-1566958769312-82cef41d19ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1156&q=80'
+                                alt='...'
+                                position='top'
+                            />
+                            <MDBCardBody>
+                                <MDBCardTitle>Cetaphil</MDBCardTitle>
+                                <MDBCardText>
+                                Face Wash Cica Series 
+                                </MDBCardText>
+                                <MDBCardText>
+                                    Rp.65.000
+                                </MDBCardText>
+                                <MDBBtn className='me-1' color='danger'>
+                                    Add Cart
+                                </MDBBtn>
+                                <MDBBtn className='me-1' color='danger'>
+                                    Order
+                                </MDBBtn>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </MDBCol>
+                    <MDBCol>
+                        <MDBCard>
+                            <MDBCardImage
+                                src='https://images.unsplash.com/photo-1566958769312-82cef41d19ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1156&q=80'
+                                alt='...'
+                                position='top'
+                            />
+                            <MDBCardBody>
+                                <MDBCardTitle>Cetaphil</MDBCardTitle>
+                                <MDBCardText>
+                                Face Wash Cica Series 
+                                </MDBCardText>
+                                <MDBCardText>
+                                    Rp.65.000
+                                </MDBCardText>
+                                <MDBBtn className='me-1' color='danger'>
+                                    Add Cart
+                                </MDBBtn>
+                                <MDBBtn className='me-1' color='danger'>
+                                    Order
+                                </MDBBtn>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </MDBCol>
+                    <MDBCol>
+                        <MDBCard>
+                            <MDBCardImage
+                                src='https://images.unsplash.com/photo-1566958769312-82cef41d19ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1156&q=80'
+                                alt='...'
+                                position='top'
+                            />
+                            <MDBCardBody>
+                                <MDBCardTitle>Cetaphil</MDBCardTitle>
+                                <MDBCardText>
+                                    Face Wash Cica Series 
+                                </MDBCardText>
+                                <MDBCardText>
+                                    Rp.65.000
+                                </MDBCardText>
+                                <MDBBtn className='me-1' color='danger'>
+                                    Add Cart
+                                </MDBBtn>
+                                <MDBBtn className='me-1' color='danger'>
+                                    Order
+                                </MDBBtn>
+                            </MDBCardBody>
+                        </MDBCard>
+                    </MDBCol>
+
                 </MDBRow>
+                
+        <MDBContainer className='align-items-center justify-center'>
+        <nav aria-label='Page navigation example '>
+        <MDBPagination className='mb-0 '>
+        <MDBPaginationItem>
+        <MDBPaginationLink href='#'>Previous</MDBPaginationLink>
+        </MDBPaginationItem>
+        <MDBPaginationItem>
+        <MDBPaginationLink href='#'>1</MDBPaginationLink>
+        </MDBPaginationItem>
+        <MDBPaginationItem>
+        <MDBPaginationLink href='#'>2</MDBPaginationLink>
+        </MDBPaginationItem>
+        <MDBPaginationItem>
+        <MDBPaginationLink href='#'>3</MDBPaginationLink>
+        </MDBPaginationItem>
+        <MDBPaginationItem>
+        <MDBPaginationLink href='#'>Next</MDBPaginationLink>
+        </MDBPaginationItem>
+        </MDBPagination>
+        </nav>
+        </MDBContainer>
+
             </div>
 
         </MDBContainer>
