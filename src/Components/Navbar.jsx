@@ -1,6 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { logoutAction } from '../Reducers/data';
+
 
 function Navbar(props) {
+    const username = useSelector((state) => state.dataReducer.username);
+    const role = useSelector((state) => state.dataReducer.role);
+    console.log(`ini role useselector`, role);
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const [isOpen, setIsOpen] = useState(false);
+    const handleOpen = () => {
+        setIsOpen(true);
+    };
+    const handleClose = () => {
+        setIsOpen(false);
+    };
     return (
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -31,12 +49,21 @@ function Navbar(props) {
                         </a>
 
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/">Dashboard</a>
+                        {
+                            role == 1 ? <li class="nav-item">
+                            <a class="nav-link" href="/">Dashboard</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/product">Product</a>
+                             : null
+                                }
+
+                        {
+                            role == 1 ? <li class="nav-item">
+                            <a class="nav-link" href="/product">Product</a>
                             </li>
+                             : null
+                                }
+
+            
                         </ul>
 
                     </div>
@@ -71,12 +98,15 @@ function Navbar(props) {
                                 class="dropdown-menu dropdown-menu-end"
                                 aria-labelledby="navbarDropdownMenuAvatar"
                             >
-                                <li>
-                                    <a class="dropdown-item" href="/login">Login</a>
-                                </li>
-                                {/* <li>
-                                    <a class="dropdown-item" href="#">Settings</a>
-                                </li> */}
+                                {
+                                username ? (
+                            
+                                { username}
+                                
+                                ) : null
+            }
+                                
+                                
                                 <li>
                                     <a class="dropdown-item" href="#">Logout</a>
                                 </li>
